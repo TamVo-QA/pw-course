@@ -94,4 +94,4 @@
      1. For (i)
         -> For (<điều kiện khởi tạo>; <điều kiện lặp>; <cập nhật>)
            { //code }
--> Format code: Option + Shifft + F
+-> Format code: Option + Shift + F
