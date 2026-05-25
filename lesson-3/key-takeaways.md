@@ -266,6 +266,16 @@ for (let i = 0; i < arr.length; i++){
 }
 ```
 
+### 3. Thêm phần tử vào mảng với **push**
+
+```JS
+const arr = [1,2] {
+arr.push(3);
+}
+console.log(arr);
+
+```
+
 ## Javascript - Function (Hàm)
 
 Là đoạn code được đặt tên và có thể dùng đi dùng lại, thực hiện 1 nhiệm vụ or 1 tính toán cụ thể
