@@ -40,6 +40,7 @@
 | `git add <file>` | Thêm 1 file vào Staging Area | Chạy khi có sự thay đổi |
 | `git add .` | Thêm tất cả file thay đổi vào Staging Area | |  
 | `git commit -m "message"` | Tạo commit mới | Có thê tạo commit cho nhiều phiên bản cùng lúc, lastest commit sẽ nằm trên cùng |
+| `git push origin main` | Push code lên github | |
 | `git log` | Xem lịch sử commit | |  
 | `git status` | Kiểm tra trạng thái file | Đỏ: File đang ở working director </br> Xanh : File đang ở Staging area |
 
@@ -56,7 +57,7 @@
 
 Format:
 
-```text
+```js
 <type>: <short_description>
 ```
 
