@@ -223,6 +223,13 @@ Example:
     //input[@id='email']
     ```
 
+#### Common XPath Functions
+
+| Function | Purpose | When to Use | Example |
+| ----------- | ----------- | ----------- | ----------- |
+| text() | Tìm ra phần tử có giá trị tương ứng | Text cố định, cần khớp chính xác | `//button[text()='Login']` |
+| contains() | Tìm ra phần tử có giá trị khớp 1 phần nội dung | Text động hoặc chỉ cần khớp một phần | `//button[contains(text(),'Login')]` |
+
 ---
 
 ## Playwright basic syntax
@@ -282,6 +289,7 @@ Example:
 | Click | `click()` | Click element | `await locator.click();` |
 | Click | `dblclick()` | Double click | `await locator.dblclick();` |
 | Click | `click({ button: 'right' })` | Right click | `await locator.click({ button: 'right' });` |
+| Hover | `hover()` | Hover on element | `await page.locator('"<xpath here>"').hover();` |
 | Input | `fill()` | Nhập dữ liệu trực tiếp | `await locator.fill('Playwright');` |
 | Input | `pressSequentially()` | Gõ từng ký tự | `await locator.pressSequentially('Playwright');` |
 | Radio/Checkbox | `isChecked()` | Kiểm tra trạng thái | `await locator.isChecked();` |
@@ -291,4 +299,23 @@ Example:
 | Select | `selectOption()` | Chọn dropdown | `await locator.selectOption('VN');` |
 | Upload File | `setInputFiles("<file-path>")` | Upload file | `await locator.setInputFiles('file.pdf');` |
 
----
+--- Con
+
+## Browser Dialog - Confirm Dialog
+
+### Overview
+
+- Confirm Dialog là hộp thoại xác nhận do trình duyệt hiển thị.
+- Thường xuất hiện trước các hành động quan trọng như:
+  - Delete
+  - Logout
+  - Submit
+  - Reset Data
+
+### Common Dialog Types
+
+| Type | Description | Action | Example |
+| -------- | -------- | -------- | ------- |
+| `alert()` | Notification message | `accept()` | `page.on('dialog', async dialog => dialog.accept());` </br> `await page.getByRole('button').click();` |
+| `confirm()` | Confirmation dialog | `accept()` / `dismiss()` | `page.on('dialog', async dialog => await dialog.dismiss());` |
+| `prompt()` | Input dialog | `accept(value)` / `dismiss()` | `expect(dialog.message()).toBe('Are you sure?');` |
